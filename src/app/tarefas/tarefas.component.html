@@ -1,0 +1,8 @@
+<h2>Minhas Tarefas</h2>
+<ul class="tarefas">
+    <li *ngFor="let tarefa of tarefas">
+        <a routerLink="/detalhes/{{tarefa.id}}">
+            <span class="badge">{{tarefa.id}}</span> {{tarefa.name}}
+        </a>        
+    </li>
+</ul>
