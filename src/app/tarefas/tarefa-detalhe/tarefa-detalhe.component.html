@@ -2,8 +2,9 @@
     <h2>{{tarefa.name | uppercase}} Detalhes</h2>
     <div><span>id: </span>{{tarefa.id}}</div>
     <div>
-        <label for="tarefa-name">Tarefa nome</label>
-        <input id="tarefa-name" [(ngModel)]="tarefa.name" placeholder="name">
+        <label for="tarefa-name">Nome da Tarefa</label>
+        <input id="tarefa-name" [(ngModel)]="tarefa.name" placeholder="name" />
     </div>
     <button (click)="goBack()">voltar</button>    
+    <button (click)="save()">salvar</button>
 </div>

@@ -32,4 +32,11 @@ export class TarefaDetalheComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    if (this.tarefa) {
+      this.tarefaService.updateTarefa(this.tarefa)
+        .subscribe(() => this.goBack());
+    }
+  }
+
 }

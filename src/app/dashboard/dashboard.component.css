@@ -1,8 +1,7 @@
-h2 {
+  h2 {
     text-align: center;
   }
-  
-  .heroes-menu {
+  .tarefas-menu {
     padding: 0;
     margin: auto;
     max-width: 1000px;

@@ -8,6 +8,11 @@ import { TarefasComponent } from './tarefas/tarefas.component';
 import { TarefaDetalheComponent } from './tarefas/tarefa-detalhe/tarefa-detalhe.component';
 import { MensagensComponent } from './tarefas/mensagens/mensagens.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TarefaProcurarComponent } from './tarefas/tarefa-procurar/tarefa-procurar.component';
+import { TarefaService } from './tarefas/tarefa.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +20,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TarefasComponent,
     TarefaDetalheComponent,
     MensagensComponent,
-    DashboardComponent
+    DashboardComponent,
+    TarefaProcurarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [TarefaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

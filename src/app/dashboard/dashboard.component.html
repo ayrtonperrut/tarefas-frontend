@@ -1,6 +1,8 @@
 <h2>Top Tarefas</h2>
 <div class="tarefas-menu">
-    <a *ngFor="let tarefa of tarefas" routerLink="/detalhes/{{tarefa.id}}">
+    <a *ngFor="let tarefa of tarefas" routerLink="/detalhe/{{tarefa.id}}">
         {{tarefa.name}}
     </a>
 </div>
+
+<app-tarefa-procurar></app-tarefa-procurar>

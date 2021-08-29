@@ -18,8 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getTarefas(): void {
-    this.tarefaService.getTarefas()
-      .subscribe(tarefas => this.tarefas = tarefas.slice(1, 5));
+    this.tarefaService.getTarefas().subscribe(tarefas => this.tarefas = tarefas.slice(1, 5))
   }
 
 }
